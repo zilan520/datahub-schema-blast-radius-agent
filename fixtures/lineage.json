@@ -1,0 +1,11 @@
+{
+  "downstream": {
+    "urn:li:dataset:(urn:li:dataPlatform:postgres,analytics.orders,PROD)": [
+      "urn:li:dataset:(urn:li:dataPlatform:snowflake,warehouse.orders,PROD)",
+      "urn:li:dataJob:(urn:li:dataFlow:airflow,orders_daily,PROD)"
+    ],
+    "urn:li:dataset:(urn:li:dataPlatform:snowflake,warehouse.orders,PROD)": [
+      "urn:li:dashboard:(urn:li:dataPlatform:looker,orders,PROD)"
+    ]
+  }
+}
