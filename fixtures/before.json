@@ -1,0 +1,8 @@
+{
+  "urn": "urn:li:dataset:(urn:li:dataPlatform:postgres,analytics.orders,PROD)",
+  "schema": [
+    {"fieldPath": "order_id", "type": "LONG", "nullable": false},
+    {"fieldPath": "customer_id", "type": "STRING", "nullable": true},
+    {"fieldPath": "total_amount", "type": "DOUBLE", "nullable": true}
+  ]
+}
