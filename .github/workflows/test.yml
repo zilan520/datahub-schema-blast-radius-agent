@@ -1,0 +1,18 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Rebuild deterministic report
+        run: python -m src.schema_agent --before fixtures/before.json --after fixtures/after.json --lineage fixtures/lineage.json --out /tmp/report.md
